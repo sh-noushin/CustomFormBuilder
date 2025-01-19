@@ -3,7 +3,49 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomFormBuilder.Domain", "..\CustomFormBuilder.Domain\CustomFormBuilder.Domain.csproj", "{91E67F8B-5023-44DD-A991-6702D6C73D76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomFormBuilder.Domain.Shared", "..\CustomFormBuilder.Domain.Shared\CustomFormBuilder.Domain.Shared.csproj", "{9C6972CA-5633-4E86-9820-3E17DC3DFAC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomFormBuilder.EntityFrameworkCore", "..\CustomFormBuilder.EntityFrameworkCore\CustomFormBuilder.EntityFrameworkCore.csproj", "{F8F870E9-496B-445E-850F-A02E0B956CA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomFormBuilder.Application.Contract", "..\CustomFormBuilder.Application.Contract\CustomFormBuilder.Application.Contract.csproj", "{7E496760-E8EF-46BE-B209-F812B194DF22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomFormBuilder.Application", "..\CustomFormBuilder.Application\CustomFormBuilder.Application.csproj", "{C462F0C5-795D-4AC0-8E84-F890B23A22C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomFormBuilder.Web", "..\CustomFormBuilder.Web\CustomFormBuilder.Web.csproj", "{4363AE1A-7309-4DB6-8229-86067DB9B0ED}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{91E67F8B-5023-44DD-A991-6702D6C73D76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91E67F8B-5023-44DD-A991-6702D6C73D76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91E67F8B-5023-44DD-A991-6702D6C73D76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91E67F8B-5023-44DD-A991-6702D6C73D76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C6972CA-5633-4E86-9820-3E17DC3DFAC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C6972CA-5633-4E86-9820-3E17DC3DFAC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C6972CA-5633-4E86-9820-3E17DC3DFAC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C6972CA-5633-4E86-9820-3E17DC3DFAC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8F870E9-496B-445E-850F-A02E0B956CA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8F870E9-496B-445E-850F-A02E0B956CA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8F870E9-496B-445E-850F-A02E0B956CA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8F870E9-496B-445E-850F-A02E0B956CA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E496760-E8EF-46BE-B209-F812B194DF22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E496760-E8EF-46BE-B209-F812B194DF22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E496760-E8EF-46BE-B209-F812B194DF22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E496760-E8EF-46BE-B209-F812B194DF22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C462F0C5-795D-4AC0-8E84-F890B23A22C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C462F0C5-795D-4AC0-8E84-F890B23A22C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C462F0C5-795D-4AC0-8E84-F890B23A22C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C462F0C5-795D-4AC0-8E84-F890B23A22C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4363AE1A-7309-4DB6-8229-86067DB9B0ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4363AE1A-7309-4DB6-8229-86067DB9B0ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4363AE1A-7309-4DB6-8229-86067DB9B0ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4363AE1A-7309-4DB6-8229-86067DB9B0ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
