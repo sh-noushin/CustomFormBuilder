@@ -6,4 +6,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Core\" />
+    <Folder Include="Forms\" />
+    <Folder Include="FormVersions\" />
+    <Folder Include="FormControls\" />
+    <Folder Include="FormControlOptions\" />
+    <Folder Include="FormSubmissions\" />
+    <Folder Include="FormSubmissionValues\" />
+  </ItemGroup>
+
 </Project>
