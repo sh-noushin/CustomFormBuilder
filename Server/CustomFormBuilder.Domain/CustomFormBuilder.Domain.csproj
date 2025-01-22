@@ -7,13 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Core\" />
-    <Folder Include="Forms\" />
-    <Folder Include="FormVersions\" />
-    <Folder Include="FormControls\" />
-    <Folder Include="FormControlOptions\" />
-    <Folder Include="FormSubmissions\" />
-    <Folder Include="FormSubmissionValues\" />
+    <ProjectReference Include="..\CustomFormBuilder.Domain.Shared\CustomFormBuilder.Domain.Shared.csproj" />
   </ItemGroup>
 
 </Project>
