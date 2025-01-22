@@ -12,9 +12,9 @@ namespace CustomFormBuilder.Domain.FormSubmissions
 {
     public class FormSubmission:BaseEntity<Guid>
     {
-        public int FormId { get; set; } 
+        public Guid FormId { get; set; } 
         public Form Form { get; set; } 
-        public int FormVersionId { get; set; } 
+        public Guid FormVersionId { get; set; } 
         public FormVersion FormVersion { get; set; } 
         public DateTime SubmittedAt { get; set; } = DateTime.UtcNow; 
         public ICollection<FormSubmissionValue> Values { get; set; } = new List<FormSubmissionValue>(); // User's values

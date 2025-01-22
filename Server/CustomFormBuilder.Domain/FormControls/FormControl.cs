@@ -1,5 +1,6 @@
 ﻿using CustomFormBuilder.Domain.Core;
 using CustomFormBuilder.Domain.FormControlOptions;
+using CustomFormBuilder.Domain.FormSubmissionValues;
 using CustomFormBuilder.Domain.FormVersions;
 using CustomFormBuilder.Domain.Shared.Enums;
 using System;
@@ -15,8 +16,9 @@ namespace CustomFormBuilder.Domain.FormControls
         public string Label { get; set; } 
         public ControlType Type { get; set; } 
         public bool IsRequired { get; set; } 
-        public int FormVersionId { get; set; } 
-        public FormVersion FormVersion { get; set; } // Navigation property
-        public ICollection<FormControlOption> Options { get; set; } = new List<FormControlOption>(); 
+        public Guid FormVersionId { get; set; } 
+        public FormVersion FormVersion { get; set; } 
+        public ICollection<FormControlOption> Options { get; set; } = new List<FormControlOption>();
+        public ICollection<FormSubmissionValue> SubmissionValues { get; set; } = new List<FormSubmissionValue>();
     }
 }

@@ -11,9 +11,9 @@ namespace CustomFormBuilder.Domain.FormSubmissionValues
 {
     public class FormSubmissionValue:BaseEntity<Guid>
     {
-        public int FormSubmissionId { get; set; } 
+        public Guid FormSubmissionId { get; set; } 
         public FormSubmission FormSubmission { get; set; } 
-        public int FormControlId { get; set; } 
+        public Guid FormControlId { get; set; } 
         public FormControl FormControl { get; set; } 
         public string Value { get; set; } 
     }
