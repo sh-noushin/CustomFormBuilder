@@ -12,7 +12,7 @@ namespace CustomFormBuilder.Domain.FormControls
     {
         public string Label { get; private set; }
         public ControlType Type { get; private set; }
-        public bool IsRequired { get; private set; }
+        public bool IsRequired { get;  set; }
         public Guid FormVersionId { get; private set; }
         public FormVersion FormVersion { get; private set; }
 
@@ -31,12 +31,12 @@ namespace CustomFormBuilder.Domain.FormControls
 
         public bool RequiresOptions => Type == ControlType.Dropdown || Type == ControlType.MultiSelect || Type == ControlType.RadioButton;
 
-        private void SetLabel(string label)
+        public void SetLabel(string label)
         {
             Label = label ?? throw new FormControlLabelIsNullOrWhiteSpaceException();
         }
 
-        private void SetType(ControlType type)
+        public void SetType(ControlType type)
         {
             if (!Enum.IsDefined(typeof(ControlType), type))
             {
@@ -44,7 +44,7 @@ namespace CustomFormBuilder.Domain.FormControls
             }
             Type = type;    
         }
-        private void SetFormVersionId(Guid formVersionId)
+        public void SetFormVersionId(Guid formVersionId)
         {
             if (formVersionId == Guid.Empty)
                 throw new FormVersionIdIsNullException();

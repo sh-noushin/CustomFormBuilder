@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CustomFormBuilder.Domain.FormVersions;
 
 namespace CustomFormBuilder.Domain.Forms
 {
@@ -11,5 +7,6 @@ namespace CustomFormBuilder.Domain.Forms
         Task<Form> CreateAsync(string name);
         Task UpdateAsync(Guid id, string name);
         Task DeleteAsync(Guid id);
+        Task<FormVersion> AddVersionAsync(Guid formId, string version);
     }
 }

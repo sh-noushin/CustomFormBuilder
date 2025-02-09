@@ -21,7 +21,7 @@ namespace CustomFormBuilder.Domain.FormControlOptions
             SetFormControlId(formControlId);
         }
 
-        private void SetValue(string value)
+        public void SetValue(string value)
         {
             if (string.IsNullOrWhiteSpace(value))
                 throw new FormControlOptionValueIsNullOrWhiteSpaceException();
@@ -29,7 +29,7 @@ namespace CustomFormBuilder.Domain.FormControlOptions
             Value = value;
         }
 
-        private void SetDisplayText(string displayText)
+        public void SetDisplayText(string displayText)
         {
             if (string.IsNullOrWhiteSpace(displayText))
                 throw new FormControlOptionDisplayTextIsNullOrWhiteSpaceException();
@@ -37,7 +37,7 @@ namespace CustomFormBuilder.Domain.FormControlOptions
             DisplayText = displayText;
         }
 
-        private void SetFormControlId(Guid formControlId)
+        public void SetFormControlId(Guid formControlId)
         {
             if (formControlId == Guid.Empty)
                 throw new FormControlOptionFormControlIdIsNullException();

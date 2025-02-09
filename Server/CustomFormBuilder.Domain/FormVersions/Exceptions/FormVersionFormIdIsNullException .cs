@@ -3,6 +3,6 @@
     internal class FormVersionFormIdIsNullException : Exception
     {
         public FormVersionFormIdIsNullException()
-            : base("FormVersion must be linked to a valid FormId.") { }
+            : base("Form version must be linked to a valid FormId.") { }
     }
 }
