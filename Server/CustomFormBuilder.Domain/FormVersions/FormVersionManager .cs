@@ -5,9 +5,9 @@ namespace CustomFormBuilder.Domain.FormVersions
 {
     public class FormVersionManager : IFormVersionManager
     {
-        private readonly IBaseRepository<FormVersion, Guid> _repository;
+        private readonly IFormVersionRepository _repository;
 
-        public FormVersionManager(IBaseRepository<FormVersion, Guid> repository)
+        public FormVersionManager(IFormVersionRepository repository)
         {
             _repository = repository;
         }

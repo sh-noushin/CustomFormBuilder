@@ -6,10 +6,10 @@ namespace CustomFormBuilder.Domain.Forms
 {
     public class FormManager : IFormManager
     {
-        private readonly IBaseRepository<Form, Guid> _formRepository;
-        private readonly IBaseRepository<FormVersion, Guid> _formVersionRepository;
+        private readonly IFormRepository _formRepository;
+        private readonly IFormVersionRepository _formVersionRepository;
 
-        public FormManager(IBaseRepository<Form, Guid> formRepository, IBaseRepository<FormVersion, Guid> formVersionRepository)
+        public FormManager(IFormRepository formRepository, IFormVersionRepository formVersionRepository)
         {
             _formRepository = formRepository;
             _formVersionRepository = formVersionRepository;

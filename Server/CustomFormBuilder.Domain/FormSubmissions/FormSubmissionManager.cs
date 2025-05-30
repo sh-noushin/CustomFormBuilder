@@ -8,11 +8,11 @@ namespace CustomFormBuilder.Domain.FormSubmissions
 
     public class FormSubmissionManager : IFormSubmissionManager
     {
-        private readonly IBaseRepository<FormSubmission, Guid> _repository;
-        private readonly IBaseRepository<FormSubmissionValue, Guid> _submissionValueRepository;
+        private readonly IFormSubmissionRepository _repository;
+        private readonly IFormSubmissionValueRepository _submissionValueRepository;
 
-        public FormSubmissionManager(IBaseRepository<FormSubmission, Guid> repository,
-                                     IBaseRepository<FormSubmissionValue, Guid> submissionValueRepository)
+        public FormSubmissionManager(IFormSubmissionRepository repository,
+                                     IFormSubmissionValueRepository submissionValueRepository)
         {
             _repository = repository;
             _submissionValueRepository = submissionValueRepository;

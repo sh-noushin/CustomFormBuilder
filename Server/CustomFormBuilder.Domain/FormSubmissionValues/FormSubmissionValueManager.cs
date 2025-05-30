@@ -5,9 +5,9 @@ namespace CustomFormBuilder.Domain.FormSubmissionValues
 {
     public class FormSubmissionValueManager : IFormSubmissionValueManager
     {
-        private readonly IBaseRepository<FormSubmissionValue, Guid> _repository;
+        private readonly IFormSubmissionValueRepository _repository;
 
-        public FormSubmissionValueManager(IBaseRepository<FormSubmissionValue, Guid> repository)
+        public FormSubmissionValueManager(IFormSubmissionValueRepository repository)
         {
             _repository = repository;
         }

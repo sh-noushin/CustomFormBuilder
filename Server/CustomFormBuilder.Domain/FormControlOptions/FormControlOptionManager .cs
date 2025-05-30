@@ -5,9 +5,9 @@ namespace CustomFormBuilder.Domain.FormControlOptions
 {
     public class FormControlOptionManager : IFormControlOptionManager
     {
-        private readonly IBaseRepository<FormControlOption, Guid> _repository;
+        private readonly IFormControlOptionRepository _repository;
 
-        public FormControlOptionManager(IBaseRepository<FormControlOption, Guid> repository)
+        public FormControlOptionManager(IFormControlOptionRepository repository)
         {
             _repository = repository;
         }

@@ -6,9 +6,9 @@ namespace CustomFormBuilder.Domain.FormControls
 {
     public class FormControlManager : IFormControlManager
     {
-        private readonly IBaseRepository<FormControl, Guid> _repository;
+        private readonly IFormControlRepository _repository;
 
-        public FormControlManager(IBaseRepository<FormControl, Guid> repository)
+        public FormControlManager(IFormControlRepository repository)
         {
             _repository = repository;
         }
