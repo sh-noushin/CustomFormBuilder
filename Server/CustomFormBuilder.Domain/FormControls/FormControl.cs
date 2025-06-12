@@ -1,5 +1,5 @@
 ﻿using CustomFormBuilder.Domain.Core;
-using CustomFormBuilder.Domain.FormControlOptions;
+using CustomFormBuilder.Domain.FormControlValues;
 using CustomFormBuilder.Domain.FormControls.Exceptions;
 using CustomFormBuilder.Domain.FormSubmissionValues;
 using CustomFormBuilder.Domain.FormVersions;
@@ -16,7 +16,7 @@ namespace CustomFormBuilder.Domain.FormControls
         public Guid FormVersionId { get; private set; }
         public FormVersion FormVersion { get; private set; } = null!;
 
-        public ICollection<FormControlOption> Options { get; private set; } = new List<FormControlOption>();
+        public ICollection<FormControlValue> Values { get; private set; } = new List<FormControlValue>();
         public ICollection<FormSubmissionValue> SubmissionValues { get; private set; } = new List<FormSubmissionValue>();
 
         private FormControl() { } 

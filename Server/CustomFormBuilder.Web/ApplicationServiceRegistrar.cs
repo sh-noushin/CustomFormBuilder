@@ -10,14 +10,14 @@ using CustomFormBuilder.Application.Forms;
 using CustomFormBuilder.Application.FormSubmissions;
 using CustomFormBuilder.Application.FormSubmissionValues;
 using CustomFormBuilder.Application.Services;
-using CustomFormBuilder.Domain.FormControlOptions;
+using CustomFormBuilder.Domain.FormControlValues;
 using CustomFormBuilder.Domain.FormControls;
 using CustomFormBuilder.Domain.Forms;
 using CustomFormBuilder.Domain.FormSubmissions;
 using CustomFormBuilder.Domain.FormSubmissionValues;
 using CustomFormBuilder.Domain.FormVersions;
 using CustomFormBuilder.EntityFrameworkCore;
-using CustomFormBuilder.EntityFrameworkCore.FormControlOptions;
+using CustomFormBuilder.EntityFrameworkCore.FormControlValues;
 using CustomFormBuilder.EntityFrameworkCore.FormControls;
 using CustomFormBuilder.EntityFrameworkCore.Forms;
 using CustomFormBuilder.EntityFrameworkCore.FormSubmissions;
@@ -41,7 +41,7 @@ namespace CustomFormBuilder.Application
 
             // Services
             services.AddScoped<IFormControlService, FormControlService>();
-            services.AddScoped<IFormControlOptionService, FormControlOptionService>();
+            services.AddScoped<IFormControlValueService, FormControlValueService>();
             services.AddScoped<IFormSubmissionService, FormSubmissionService>();
             services.AddScoped<IFormSubmissionValueService, FormSubmissionValueService>();
             services.AddScoped<IFormService, FormService>();
@@ -49,7 +49,7 @@ namespace CustomFormBuilder.Application
 
             // Managers
             services.AddScoped<IFormControlManager, FormControlManager>();
-            services.AddScoped<IFormControlOptionManager, FormControlOptionManager>();
+            services.AddScoped<IFormControlValueManager, FormControlValueManager>();
             services.AddScoped<IFormSubmissionManager, FormSubmissionManager>();
             services.AddScoped<IFormSubmissionValueManager, FormSubmissionValueManager>();
             services.AddScoped<IFormManager, FormManager>();
@@ -57,7 +57,7 @@ namespace CustomFormBuilder.Application
 
             // Repositories
             services.AddScoped<IFormControlRepository, FormControlRepository>();
-            services.AddScoped<IFormControlOptionRepository, FormControlOptionRepository>();
+            services.AddScoped<IFormControlValueRepository, FormControlValueRepository>();
             services.AddScoped<IFormSubmissionRepository, FormSubmissionRepository>();
             services.AddScoped<IFormSubmissionValueRepository, FormSubmissionValueRepository>();
             services.AddScoped<IFormRepository, FormRepository>();

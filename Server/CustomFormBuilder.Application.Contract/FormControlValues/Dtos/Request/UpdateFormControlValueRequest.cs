@@ -1,8 +1,7 @@
 ﻿namespace CustomFormBuilder.Application.Contract.FormControlOptions.Dtos.Request
 {
-    public record UpdateFormControlOptionRequest(
+    public record UpdateFormControlValueRequest(
         Guid Id,
-        string Value,
-        string DisplayText
+        string Value
     );
 }

@@ -1,4 +1,4 @@
-﻿using CustomFormBuilder.Domain.FormControlOptions;
+﻿using CustomFormBuilder.Domain.FormControlValues;
 using CustomFormBuilder.Domain.FormControls;
 using CustomFormBuilder.Domain.Forms;
 using CustomFormBuilder.Domain.FormSubmissionValues;
@@ -13,7 +13,7 @@ namespace CustomFormBuilder.EntityFrameworkCore
         public DbSet<Form> Forms { get; set; }
         public DbSet<FormVersion> FormVersions { get; set; }
         public DbSet<FormControl> FormControls { get; set; }
-        public DbSet<FormControlOption> FormControlOptions { get; set; }
+        public DbSet<FormControlValue> FormControlValues { get; set; }
         public DbSet<FormSubmission> FormSubmissions { get; set; }
         public DbSet<FormSubmissionValue> FormSubmissionValues { get; set; }
 
@@ -34,7 +34,7 @@ namespace CustomFormBuilder.EntityFrameworkCore
                 .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<FormControl>()
-                .HasMany(c => c.Options)
+                .HasMany(c => c.Values)
                 .WithOne(o => o.FormControl)
                 .HasForeignKey(o => o.FormControlId)
                 .OnDelete(DeleteBehavior.Cascade);

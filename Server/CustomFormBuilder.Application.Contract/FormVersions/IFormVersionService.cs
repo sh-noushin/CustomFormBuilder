@@ -10,6 +10,7 @@ namespace CustomFormBuilder.Application.Contract.FormVersions
         Task DeleteAsync(Guid id);
         Task<FormVersionResponse> GetByIdAsync(Guid id);
         Task<IEnumerable<FormVersionResponse>> GetAllAsync();
+        Task<IEnumerable<FormVersionResponse>> GetListWithControlsAsync();        
         Task<FormVersionResponse> GetByVersionAsync(string version);
     }
 }

@@ -2,7 +2,10 @@
 
 namespace CustomFormBuilder.Domain.FormVersions
 {
-    public interface IFormVersionRepository:IBaseRepository<FormVersion, Guid>
+    public interface IFormVersionRepository : IBaseRepository<FormVersion, Guid>
     {
+
+        Task<List<FormVersion>> GetListWithControlsAsync();
+
     }
 }

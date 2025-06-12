@@ -50,6 +50,12 @@ namespace CustomFormBuilder.Application.Services
             return _mapper.Map<IEnumerable<FormVersionResponse>>(list);
         }
 
+        public async Task<IEnumerable<FormVersionResponse>> GetListWithControlsAsync()
+        {
+            var list = await _repository.GetListWithControlsAsync();
+            return _mapper.Map<IEnumerable<FormVersionResponse>>(list);
+        }
+
         public async Task<FormVersionResponse> GetByVersionAsync(string version)
         {
             var list = await _repository.GetListAsync(v => v.Version == version);

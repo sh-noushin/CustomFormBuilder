@@ -1,9 +1,8 @@
 ﻿namespace CustomFormBuilder.Application.Contract.FormControlOptions.Dtos.Response
 {
-    public record FormControlOptionResponse(
+    public record FormControlValueResponse(
        Guid Id,
        string Value,
-       string DisplayText,
        Guid FormControlId
    );
 }

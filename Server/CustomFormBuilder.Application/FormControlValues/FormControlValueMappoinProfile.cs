@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using CustomFormBuilder.Application.Contract.FormControlOptions.Dtos.Response;
-using CustomFormBuilder.Domain.FormControlOptions;
+using CustomFormBuilder.Domain.FormControlValues;
+using CustomFormBuilder.Domain.FormControlValues;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace CustomFormBuilder.Application.FormControlOptions
 {
-    public class FormControlOptionMappoinProfile : Profile
+    public class FormControlValueMappoinProfile : Profile
     {
-        public FormControlOptionMappoinProfile()
+        public FormControlValueMappoinProfile()
         {
-            CreateMap<FormControlOption, FormControlOptionResponse>().ReverseMap();
+            CreateMap<FormControlValue, FormControlValueResponse>().ReverseMap();
         }
     }
 }

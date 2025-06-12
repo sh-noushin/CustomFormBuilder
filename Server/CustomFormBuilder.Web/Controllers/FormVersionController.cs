@@ -59,5 +59,12 @@ namespace CustomFormBuilder.Api.Controllers
             var result = await _service.GetAllAsync();
             return Ok(result);
         }
+
+        [HttpGet("getallwithcontrols")]
+        public async Task<ActionResult<IEnumerable<FormVersionResponse>>> GetListWithControlsAsync()
+        {
+            var result = await _service.GetListWithControlsAsync();
+            return Ok(result);
+        }
     }
 }
