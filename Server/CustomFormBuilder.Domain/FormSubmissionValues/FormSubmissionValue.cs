@@ -7,10 +7,10 @@ namespace CustomFormBuilder.Domain.FormSubmissionValues
     public class FormSubmissionValue : BaseEntity<Guid>
     {
         public Guid FormSubmissionId { get; private set; }
-        public FormSubmission FormSubmission { get; private set; }
+        public FormSubmission FormSubmission { get; private set; } = null!;
 
         public Guid FormControlId { get; private set; }
-        public FormControl FormControl { get; private set; }
+        public FormControl FormControl { get; private set; } = null!;
 
         public string Value { get; private set; }
 

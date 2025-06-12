@@ -10,7 +10,7 @@ namespace CustomFormBuilder.Domain.FormControlOptions
         public string Value { get; private set; }
         public string DisplayText { get; private set; }
         public Guid FormControlId { get; private set; }
-        public FormControl FormControl { get; private set; }
+        public FormControl FormControl { get; private set; } = null!;
 
         private FormControlOption() { } 
 

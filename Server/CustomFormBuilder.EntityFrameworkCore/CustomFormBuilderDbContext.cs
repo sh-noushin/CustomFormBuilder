@@ -2,6 +2,7 @@
 using CustomFormBuilder.Domain.FormControls;
 using CustomFormBuilder.Domain.Forms;
 using CustomFormBuilder.Domain.FormSubmissionValues;
+using CustomFormBuilder.Domain.FormSubmissions;
 using CustomFormBuilder.Domain.FormVersions;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,9 +17,7 @@ namespace CustomFormBuilder.EntityFrameworkCore
         public DbSet<FormSubmission> FormSubmissions { get; set; }
         public DbSet<FormSubmissionValue> FormSubmissionValues { get; set; }
 
-        public CustomFormBuilderDbContext(DbContextOptions<CustomFormBuilderDbContext> options) : base(options)
-        {
-        }
+        public CustomFormBuilderDbContext(DbContextOptions<CustomFormBuilderDbContext> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -47,8 +46,14 @@ namespace CustomFormBuilder.EntityFrameworkCore
                 .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<FormSubmission>()
-                .HasMany(s => s.Values)
-                .WithOne(v => v.FormSubmission)
+                .HasOne(s => s.FormVersion)
+                .WithMany()
+                .HasForeignKey(s => s.FormVersionId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<FormSubmissionValue>()
+                .HasOne(v => v.FormSubmission)
+                .WithMany(s => s.Values)
                 .HasForeignKey(v => v.FormSubmissionId)
                 .OnDelete(DeleteBehavior.Cascade);
         }

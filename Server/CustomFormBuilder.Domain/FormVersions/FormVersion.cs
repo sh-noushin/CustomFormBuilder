@@ -8,7 +8,7 @@ namespace CustomFormBuilder.Domain.FormVersions
     public class FormVersion : BaseEntity<Guid>
     {
         public Guid FormId { get; private set; }
-        public Form Form { get; private set; }
+        public Form Form { get; private set; } = null!; 
 
         public string Version { get; private set; }
         public DateTime CreatedAt { get; private set; } = DateTime.UtcNow;

@@ -14,7 +14,7 @@ namespace CustomFormBuilder.Domain.FormControls
         public ControlType Type { get; private set; }
         public bool IsRequired { get;  set; }
         public Guid FormVersionId { get; private set; }
-        public FormVersion FormVersion { get; private set; }
+        public FormVersion FormVersion { get; private set; } = null!;
 
         public ICollection<FormControlOption> Options { get; private set; } = new List<FormControlOption>();
         public ICollection<FormSubmissionValue> SubmissionValues { get; private set; } = new List<FormSubmissionValue>();
