@@ -1,6 +1,0 @@
-@CustomFormBuilder.Web_HostAddress = http://localhost:5073
-
-GET {{CustomFormBuilder.Web_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
